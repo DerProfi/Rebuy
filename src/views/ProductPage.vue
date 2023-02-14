@@ -38,13 +38,13 @@ const offer = store.getOfferById(Number(route.params.id));
 @import "../src/styles/main.scss";
 
 .container {
-  outline: 1px solid rgb(208, 207, 207);
+  outline: $outline;
   width: 500px;
   margin: 0 auto;
   margin-top: 100px;
   &-details {
     width: 100%;
-    padding: 15px;
+    padding: $sp-m;
     background-color: $secondary;
     box-sizing: border-box;
   }

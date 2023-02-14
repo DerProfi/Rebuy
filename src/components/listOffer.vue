@@ -45,8 +45,8 @@ const sortedOffers = computed(() => {
 }
 
 .offer {
-  outline: 1px solid rgb(208, 207, 207);
-  margin: 20px;
+  outline: $outline;
+  margin: $sp-l;
   background-color: $secondary;
   img {
     display: flex;
@@ -60,7 +60,7 @@ const sortedOffers = computed(() => {
   row-gap: 50px;
   list-style: none;
   &-details {
-    margin: 10px 15px;
+    margin: $sp-s $sp-m;
   }
 }
 </style>
