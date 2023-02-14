@@ -21,6 +21,30 @@ export const useStore = defineStore("main", {
         description: "This is the third offer",
         votes: 0,
       },
+      {
+        id: 4,
+        title: "Third",
+        description: "This is the third offer",
+        votes: 0,
+      },
+      {
+        id: 5,
+        title: "Third",
+        description: "This is the third offer",
+        votes: 0,
+      },
+      {
+        id: 6,
+        title: "Third",
+        description: "This is the third offer",
+        votes: 0,
+      },
+      {
+        id: 7,
+        title: "Third",
+        description: "This is the third offer",
+        votes: 0,
+      },
     ],
   }),
   actions: {
