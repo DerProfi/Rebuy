@@ -29,27 +29,6 @@ const { offers } = storeToRefs(store);
 const sortedOffers = computed(() => {
   return offers.value.sort((a, b) => b.votes - a.votes);
 });
-//MODAL
-// var modal = document.getElementById("myModal");
-// function openModul() {
-//   var modal = document.getElementById("myModal");
-//   modal.style.display = "block";
-// }
-// function createLink() {
-//   let link = "https://www.rebuy.de/i,";
-//   document.getElementById("link")?.setAttribute("href", link);
-// }
-// function closeModal() {
-//   var modal = document.getElementById("myModal");
-//   modal.style.display = "none";
-// }
-// window.onclick = function (event) {
-//   var modal = document.getElementById("myModal");
-
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// };
 </script>
 
 <style lang="scss" scoped>
