@@ -15,12 +15,11 @@
           alt="Dummy Image"
         />
         {{ offer.title }} ({{ offer.votes }} votes)
-        <button @click="store.upvoteOffer(offer.id)">Upvote</button>
-        <button @click="store.downvoteOffer(offer.id)">Downvote</button>
-        <!-- <router-link :to="`/offers/${offer.id}`">Details</router-link> -->
-        <button @click="openModul">Details</button>
+        <the-button title="Upvote" @click="store.upvoteOffer(offer.id)" />
+        <the-button title="Downvote" @click="store.downvoteOffer(offer.id)" />
+        <router-link :to="`/offer/${offer.id}`">Details</router-link>
 
-        <div class="modal" id="myModal">
+        <!-- <div class="modal" id="myModal">
           <div class="modal-content">
             <span class="close" @click="closeModal">&times;</span>
             <h1>{{ offer.title }}</h1>
@@ -41,7 +40,7 @@
               >Purchase on Rebuy</a
             >
           </div>
-        </div>
+        </div> -->
       </li>
     </ul>
   </div>
@@ -51,6 +50,7 @@
 import { storeToRefs } from "pinia";
 import { useStore } from "../stores/store";
 import { computed } from "vue";
+import TheButton from "../components/TheButton.vue";
 
 const store = useStore();
 const { offers } = storeToRefs(store);
@@ -59,26 +59,26 @@ const sortedOffers = computed(() => {
   return offers.value.sort((a, b) => b.votes - a.votes);
 });
 //MODAL
-var modal = document.getElementById("myModal");
-function openModul() {
-  var modal = document.getElementById("myModal");
-  modal.style.display = "block";
-}
-function createLink() {
-  let link = "https://www.rebuy.de/i,";
-  document.getElementById("link")?.setAttribute("href", link);
-}
-function closeModal() {
-  var modal = document.getElementById("myModal");
-  modal.style.display = "none";
-}
-window.onclick = function (event) {
-  var modal = document.getElementById("myModal");
+// var modal = document.getElementById("myModal");
+// function openModul() {
+//   var modal = document.getElementById("myModal");
+//   modal.style.display = "block";
+// }
+// function createLink() {
+//   let link = "https://www.rebuy.de/i,";
+//   document.getElementById("link")?.setAttribute("href", link);
+// }
+// function closeModal() {
+//   var modal = document.getElementById("myModal");
+//   modal.style.display = "none";
+// }
+// window.onclick = function (event) {
+//   var modal = document.getElementById("myModal");
 
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// };
 </script>
 
 <style lang="scss" scoped>
