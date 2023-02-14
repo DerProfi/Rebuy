@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul class="list">
-      <li v-for="offer in offers" :key="offer.id" class="offer">
+      <li v-for="offer in sortedOffers" :key="offer.id" class="offer">
         <img
           v-if="offer.image"
           :src="offer.image"
@@ -50,27 +50,28 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
 import { useStore } from "../stores/store";
+import { computed } from "vue";
 
 const store = useStore();
 const { offers } = storeToRefs(store);
 
+const sortedOffers = computed(() => {
+  return offers.value.sort((a, b) => b.votes - a.votes);
+});
+//MODAL
 var modal = document.getElementById("myModal");
-
 function openModul() {
   var modal = document.getElementById("myModal");
   modal.style.display = "block";
 }
-
 function createLink() {
   let link = "https://www.rebuy.de/i,";
   document.getElementById("link")?.setAttribute("href", link);
 }
-
 function closeModal() {
   var modal = document.getElementById("myModal");
   modal.style.display = "none";
 }
-
 window.onclick = function (event) {
   var modal = document.getElementById("myModal");
 

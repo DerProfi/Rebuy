@@ -15,7 +15,7 @@ export const useStore = defineStore("main", {
         id: 2,
         title: "Second",
         description: "This is the second offer",
-        votes: 0,
+        votes: 3,
       },
       {
         id: 3,
@@ -28,7 +28,7 @@ export const useStore = defineStore("main", {
         id: 4,
         title: "Third",
         description: "This is the third offer",
-        votes: 0,
+        votes: 2,
       },
       {
         id: 5,
@@ -40,7 +40,7 @@ export const useStore = defineStore("main", {
         id: 6,
         title: "Third",
         description: "This is the third offer",
-        votes: 0,
+        votes: 1,
       },
       {
         id: 7,
