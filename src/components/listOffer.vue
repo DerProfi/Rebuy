@@ -62,7 +62,5 @@ const sortedOffers = computed(() => {
   &-details {
     margin: 10px 15px;
   }
-  &-buttons {
-  }
 }
 </style>

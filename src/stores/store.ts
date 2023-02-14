@@ -6,7 +6,8 @@ export const useStore = defineStore("main", {
       {
         id: 1,
         title: "Product One",
-        description: "This is the first offer",
+        description:
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         votes: 0,
         image: "../../public/iphone.jpg",
         link: "11374415",
@@ -14,13 +15,17 @@ export const useStore = defineStore("main", {
       {
         id: 2,
         title: "Product Two",
-        description: "This is the second offer",
+        description:
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         votes: 3,
+        image: "../../public/pods.jpg",
+        link: "11185787",
       },
       {
         id: 3,
         title: "Product Three",
-        description: "This is the third offer",
+        description:
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         votes: 0,
         image: "../../public/mac.jpg",
         link: "9870608",
@@ -28,25 +33,31 @@ export const useStore = defineStore("main", {
       {
         id: 4,
         title: "Product Four",
-        description: "This is the fourth offer",
+        description:
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         votes: 2,
       },
       {
         id: 5,
         title: "Product Fife",
-        description: "This is the fifth offer",
+        description:
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         votes: 0,
       },
       {
         id: 6,
         title: "Product Six",
-        description: "This is the sisth offer",
+        description:
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         votes: 1,
+        image: "../../public/ipad.jpg",
+        link: "8147992",
       },
       {
         id: 7,
         title: "Product Seven",
-        description: "This is the seventh offer",
+        description:
+          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
         votes: 0,
       },
     ],
