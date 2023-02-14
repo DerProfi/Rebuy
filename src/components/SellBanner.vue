@@ -12,8 +12,8 @@
 .container {
   background-color: rgb(254, 168, 168);
   a {
-    text-decoration: none;
     color: black;
+    background-color: transparent;
   }
 }
 .heading {

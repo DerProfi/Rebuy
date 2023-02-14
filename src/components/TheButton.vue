@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <button>{{ title }}</button>
   </div>
 </template>
@@ -10,4 +10,8 @@ const props = defineProps({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+  display: inline;
+}
+</style>

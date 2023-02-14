@@ -18,6 +18,7 @@
       target="blank"
       >BUY</a
     >
+    <router-link :to="'/'">All offers</router-link>
   </div>
 </template>
 
@@ -27,7 +28,6 @@ const route = useRoute();
 import { useStore } from "../stores/store";
 const store = useStore();
 const offer = store.getOfferById(Number(route.params.id));
-// const link = offer.link ? "`https://www.rebuy.de/i,` + offer.link" : "https://www.rebuy.de/kaufen/categories";
 </script>
 
 <style lang="scss" scoped></style>
