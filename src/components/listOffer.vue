@@ -2,45 +2,16 @@
   <div>
     <ul class="list">
       <li v-for="offer in sortedOffers" :key="offer.id" class="offer">
-        <img
-          v-if="offer.image"
-          :src="offer.image"
-          :fallback="store.imageDefault"
-          alt="Product image"
-        />
+        <img v-if="offer.image" :src="offer.image" alt="Product image" />
         <img
           v-else
           src="https://dummyimage.com/600x400/74c0c8/fff&text=ReMarket"
-          :fallback="store.imageDefault"
           alt="Dummy Image"
         />
         {{ offer.title }} ({{ offer.votes }} votes)
         <the-button title="Upvote" @click="store.upvoteOffer(offer.id)" />
         <the-button title="Downvote" @click="store.downvoteOffer(offer.id)" />
         <router-link :to="`/offer/${offer.id}`">Details</router-link>
-
-        <!-- <div class="modal" id="myModal">
-          <div class="modal-content">
-            <span class="close" @click="closeModal">&times;</span>
-            <h1>{{ offer.title }}</h1>
-            <img
-              v-if="offer.image"
-              :src="offer.image"
-              :fallback="store.imageDefault"
-              alt="Product image"
-            />
-            <img
-              v-else
-              src="https://dummyimage.com/600x400/74c0c8/fff&text=ReMarket"
-              :fallback="store.imageDefault"
-              alt="Dummy Image"
-            />
-            <p>{{ offer.description }}</p>
-            <a :href="createLink" target="_blank" id="link"
-              >Purchase on Rebuy</a
-            >
-          </div>
-        </div> -->
       </li>
     </ul>
   </div>

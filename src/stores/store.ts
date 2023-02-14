@@ -1,12 +1,11 @@
 import { defineStore } from "pinia";
-// import type { Offer } from "../models/offer";
 
 export const useStore = defineStore("main", {
   state: () => ({
     offers: [
       {
         id: 1,
-        title: "First",
+        title: "Product One",
         description: "This is the first offer",
         votes: 0,
         image: "../../public/iphone.jpg",
@@ -14,13 +13,13 @@ export const useStore = defineStore("main", {
       },
       {
         id: 2,
-        title: "Second",
+        title: "Product Two",
         description: "This is the second offer",
         votes: 3,
       },
       {
         id: 3,
-        title: "Third",
+        title: "Product Three",
         description: "This is the third offer",
         votes: 0,
         image: "../../public/mac.jpg",
@@ -28,30 +27,35 @@ export const useStore = defineStore("main", {
       },
       {
         id: 4,
-        title: "Fourth",
+        title: "Product Four",
         description: "This is the fourth offer",
         votes: 2,
       },
       {
         id: 5,
-        title: "Fifth",
+        title: "Product Fife",
         description: "This is the fifth offer",
         votes: 0,
       },
       {
         id: 6,
-        title: "Sixth",
+        title: "Product Six",
         description: "This is the sisth offer",
         votes: 1,
       },
       {
         id: 7,
-        title: "Seventh",
+        title: "Product Seven",
         description: "This is the seventh offer",
         votes: 0,
       },
     ],
   }),
+  getters: {
+    getOfferById: (state) => (id: Number) => {
+      return state.offers.find((o) => o.id === id);
+    },
+  },
   actions: {
     downvoteOffer(offerId: number) {
       const offer = this.offers.find((o) => o.id === offerId);
