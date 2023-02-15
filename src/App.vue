@@ -9,6 +9,4 @@ import SellBanner from "../src/components/SellBanner.vue";
   <RouterView />
 </template>
 
-<style scoped lang="scss">
-@import "../src/styles/main.scss";
-</style>
+<style scoped lang="scss"></style>

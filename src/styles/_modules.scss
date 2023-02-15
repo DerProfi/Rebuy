@@ -1,4 +1,15 @@
-button {
+a {
+  color: white;
+  background-color: $tertiary;
+  border: none;
+  border-radius: 4px;
+  padding: $sp-m $sp-xl;
+  font-size: $sp-m;
+  margin: $sp-xs $sp-s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button {
     color: white;
     background-color: $tertiary;
     border: none;
@@ -7,16 +18,17 @@ button {
     font-size: $sp-m;
     margin: $sp-xs $sp-s $sp-xs 0;
     cursor: pointer;
+    &--secondary{
+      background-color: rgb(81, 80, 80);
+    }
+    &--tertiary{
+      background-color: #ff0081;
+      color: #fff;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+      box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+    }
   }
-
-a {
-    color: white;
-    background-color: $tertiary;
-    border: none;
-    border-radius: 4px;
-    padding: $sp-m $sp-xl;
-    font-size: $sp-m;
-    margin: $sp-xs $sp-s;
-    cursor: pointer;
-    text-decoration: none;
-}

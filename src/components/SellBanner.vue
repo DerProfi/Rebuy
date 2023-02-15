@@ -6,11 +6,9 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
-
 <style lang="scss" scoped>
 .container {
-  background-color: rgb(254, 168, 168);
+  background-color: $highlight;
   a {
     color: black;
     background-color: transparent;

@@ -66,6 +66,9 @@ export const useStore = defineStore("main", {
     getOfferById: (state) => (id: Number) => {
       return state.offers.find((o) => o.id === id);
     },
+    getSortedOffers: (state) => () => {
+      return state.offers.sort((a, b) => b.votes - a.votes);
+    },
   },
   actions: {
     downvoteOffer(offerId: number) {
