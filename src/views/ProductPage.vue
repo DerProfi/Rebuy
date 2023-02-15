@@ -2,8 +2,8 @@
   <div class="product">
     <img
       class="product__image"
-      v-if="offer.image"
-      :src="offer.image"
+      v-if="offer?.image"
+      :src="offer?.image"
       alt="Product image"
     />
     <img
@@ -13,15 +13,15 @@
       alt="Dummy Image"
     />
     <div class="product__details">
-      <h2>{{ offer.title }}</h2>
-      <p>{{ offer.description }}</p>
-      <p>Votes: {{ offer.votes }}</p>
+      <h2>{{ offer?.title }}</h2>
+      <p>{{ offer?.description }}</p>
+      <p>Votes: {{ offer?.votes }}</p>
       <div class="product__buttons">
         <a
           class="button--tertiary"
           :href="
-            offer.link != undefined
-              ? `https://www.rebuy.de/i,` + offer.link
+            offer?.link != undefined
+              ? `https://www.rebuy.de/i,` + offer?.link
               : 'https://www.rebuy.de/kaufen/categories'
           "
           target="blank"
@@ -38,9 +38,10 @@
 <script setup lang="ts">
 // Use route for params
 import { useRoute } from "vue-router";
+import { useStore } from "../stores/store";
 const route = useRoute();
 // Use Pinia
-import { useStore } from "../stores/store";
+
 const store = useStore();
 // Get the offer correlated to the current route
 const offer = store.getOfferById(Number(route.params.id));
