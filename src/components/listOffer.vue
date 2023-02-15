@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <ul class="list">
-      <li class="list-offer" v-for="offer in sortedOffers" :key="offer.id">
+      <li class="list__offer" v-for="offer in sortedOffers" :key="offer.id">
         <img v-if="offer.image" :src="offer.image" alt="Product image" />
         <img
           v-else
           src="https://dummyimage.com/600x400/74c0c8/fff&text=ReMarket"
           alt="Dummy Image"
         />
-        <div class="list-details">
+        <div class="list__details">
           <h3>{{ offer.title }}</h3>
           <p>{{ offer.votes }} votes</p>
           <the-button
@@ -56,7 +56,7 @@ const sortedOffers = computed(() => {
   justify-content: space-between;
   row-gap: 50px;
   list-style: none;
-  &-offer {
+  &__offer {
     outline: $outline;
     margin: $sp-l;
     background-color: $secondary;
@@ -65,7 +65,7 @@ const sortedOffers = computed(() => {
       width: 350px;
     }
   }
-  &-details {
+  &__details {
     margin: $sp-s $sp-m;
   }
 }

@@ -1,22 +1,22 @@
 <template>
   <div class="product">
     <img
-      class="product-image"
+      class="product__image"
       v-if="offer.image"
       :src="offer.image"
       alt="Product image"
     />
     <img
-      class="product-image"
+      class="product__image"
       v-else
       src="https://dummyimage.com/600x400/74c0c8/fff&text=ReMarket"
       alt="Dummy Image"
     />
-    <div class="product-details">
+    <div class="product__details">
       <h2>{{ offer.title }}</h2>
       <p>{{ offer.description }}</p>
       <p>Votes: {{ offer.votes }}</p>
-      <div class="product-buttons">
+      <div class="product__buttons">
         <a
           class="button--tertiary"
           :href="
@@ -54,19 +54,19 @@ const offer = store.getOfferById(Number(route.params.id));
   width: 500px;
   margin: 0 auto;
   margin-top: 100px;
-  &-image {
+  &__image {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
   }
-  &-details {
+  &__details {
     width: 100%;
     padding: $sp-m;
     background-color: $secondary;
     box-sizing: border-box;
   }
-  &-buttons {
+  &__buttons {
     height: auto;
     display: flex;
     justify-content: center;
