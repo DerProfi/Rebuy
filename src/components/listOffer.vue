@@ -2,11 +2,14 @@
   <div class="container">
     <ul class="list">
       <li class="list__offer" v-for="offer in sortedOffers" :key="offer.id">
-        <img v-if="offer.image" :src="offer.image" alt="Product image" />
         <img
-          v-else
-          src="https://dummyimage.com/600x400/74c0c8/fff&text=ReMarket"
-          alt="Dummy Image"
+          class="list__image"
+          :src="
+            offer.image != undefined
+              ? offer.image
+              : 'https://dummyimage.com/600x400/74c0c8/fff&text=ReMarket'
+          "
+          alt="Product image"
         />
         <div class="list__details">
           <h3>{{ offer.title }}</h3>
@@ -60,10 +63,10 @@ const sortedOffers = computed(() => {
     outline: $outline;
     margin: $sp-l;
     background-color: $secondary;
-    img {
-      display: flex;
-      width: 350px;
-    }
+  }
+  &__image {
+    display: flex;
+    width: 350px;
   }
   &__details {
     margin: $sp-s $sp-m;

@@ -1,4 +1,4 @@
-# Homeday Tech Task
+# Rebuy Tech Task
 
 ## Table of contents
 
